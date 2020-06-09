@@ -15,7 +15,7 @@ public class DeliveryCardTest {
     String name = dataGenerator.nameByCard();
     String city = dataGenerator.getRandomCity();
     String phone = dataGenerator.getPhone();
-    SelenideElement form = $("[class='form form_size_m form_theme_alfa-on-white']");
+    SelenideElement form = $("form[class='form form_size_m form_theme_alfa-on-white']");
 
     @BeforeEach
     void setUp() {
