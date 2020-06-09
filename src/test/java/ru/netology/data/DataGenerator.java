@@ -11,10 +11,10 @@ public class DataGenerator {
     private LocalDate today = LocalDate.now();
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
-    private final Faker faker = new Faker(new Locale("ru"));
+    private Faker faker = new Faker(new Locale("ru"));
 
     public String nameByCard() {
-        return faker.name().fullName();
+        return faker.name().lastName() + " " + faker.name().firstName();
     }
 
     public String forwardDate(int pluDays){
